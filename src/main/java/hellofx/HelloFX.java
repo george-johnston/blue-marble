@@ -1,3 +1,5 @@
+// DONT USE IF USING SCENEBUILDER
+
 package hellofx;
 
 import javafx.application.Application;

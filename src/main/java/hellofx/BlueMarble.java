@@ -1,3 +1,4 @@
+package hellofx;
 
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class BlueMarble {
 
 	public static InputStream getMostRecentImage() {
 		BlueMarble blueMarble = new BlueMarble();
-		blueMarble.setDate(LocalDate.now().minusDays(1).toString());
+		blueMarble.setDate(LocalDate.now().minusDays(120).toString());
 		return blueMarble.getImage();
 	}
 	
@@ -39,12 +40,13 @@ public class BlueMarble {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
 	private void getMetaData() throws IOException, MalformedURLException {
 		String metaQueryURL = "https://epic.gsfc.nasa.gov/api/" + quality + "/date/" + dateAsString;
+		System.out.println(metaQueryURL);
 		InputStream metaInfoStream = new URL(metaQueryURL).openStream();
 		String metaInfoJSON = IOUtils.toString(metaInfoStream, "UTF-8").replace("[", "");
-		System.out.println(metaInfoJSON);
+		System.out.println("metaInfoJson: " + metaInfoJSON);
 		metaInfoStream.close();
 		JSONObject json = new JSONObject(metaInfoJSON);
 		this.nasaImageName = (String) json.get("image");
@@ -56,6 +58,7 @@ public class BlueMarble {
 	}
 
 	public void setEnhanced(boolean b) {
-		this.quality = "enhanced";
+		quality = (b ? "enhanced" : "natural");
+		//this.quality = "enhanced";
 	}
 }
