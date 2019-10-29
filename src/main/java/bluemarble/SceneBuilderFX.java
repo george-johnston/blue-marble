@@ -1,4 +1,4 @@
-package hellofx;
+package bluemarble;
 
 import java.io.IOException;
 

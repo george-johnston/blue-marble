@@ -1,4 +1,4 @@
-package hellofx;
+package bluemarble;
 
 public class Launcher {
     

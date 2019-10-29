@@ -1,4 +1,4 @@
-package hellofx;
+package bluemarble;
 
 
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class BlueMarble {
 
 	public static InputStream getMostRecentImage() {
 		BlueMarble blueMarble = new BlueMarble();
-		blueMarble.setDate(LocalDate.now().minusDays(120).toString());
+		blueMarble.setDate(LocalDate.now().minusDays(200).toString());
 		return blueMarble.getImage();
 	}
 	

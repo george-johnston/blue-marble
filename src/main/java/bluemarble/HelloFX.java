@@ -1,6 +1,6 @@
 // DONT USE IF USING SCENEBUILDER
 
-package hellofx;
+package bluemarble;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

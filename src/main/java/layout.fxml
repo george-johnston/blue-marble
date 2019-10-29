@@ -7,12 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="900.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.MarbleController">
+<AnchorPane prefHeight="900.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bluemarble.MarbleController">
    <children>
       <ImageView fx:id="marbleImage" fitHeight="750.0" fitWidth="750.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="marbleButton" disable="true" layoutX="375.0" layoutY="841.0" mnemonicParsing="false" onAction="#marbleButtonClicked" text="Marble Me" />
       <DatePicker fx:id="datePicker" layoutX="325.0" layoutY="805.0" onAction="#dateSelected" />
-      <CheckBox fx:id="enhanceCheckBox" accessibleRole="IMAGE_VIEW" contentDisplay="RIGHT" layoutX="231.0" layoutY="809.0" mnemonicParsing="false" text="Enhance!" visible="false" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="809.0" />
-      <Text fx:id="instructionText" layoutX="308.0" layoutY="801.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick a date on or before June 27, 2019" wrappingWidth="207.83203125" />
+      <CheckBox fx:id="enhanceCheckBox" accessibleRole="IMAGE_VIEW" contentDisplay="RIGHT" disable="true" layoutX="229.0" layoutY="809.0" mnemonicParsing="false" text="Enhance!" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="229.0" AnchorPane.rightAnchor="502.0" AnchorPane.topAnchor="809.0" />
+      <Text fx:id="instructionText" layoutX="196.0" layoutY="788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick a date on or before June 27, 2019. Later images are temporarily unavailable." wrappingWidth="431.83203125" />
+      <CheckBox fx:id="blackWhiteCheckBox" disable="true" layoutX="229.0" layoutY="845.0" mnemonicParsing="false" text="Black &amp; White" />
    </children>
 </AnchorPane>
